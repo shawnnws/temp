@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body data-th-object="${contact}">
+
+    <!--Div to display success message if form is filled correctly and submitted successfully-->
+    <div th:text = "${successMessage}" th:if = "${successMessage != null}" class="success-message"></div>
+    <br>
+    <!--Links to direct user back to home page or contact list page-->    
+    <a href="/">Back to Home Page</a>
+    <br>
+    <a href="/list">Back to Contacts List</a>
+    <br>
+    <!--Display Contacts information-->
+    <h1>Your Contact Information</h1>
+
+    <p>
+        ID:
+        <p data-th-text="*{id}"></p>
+    </p>
+
+    <p>
+        Name:
+        <p data-th-text="*{name}"></p>
+    </p>
+
+    <p>
+        Email:
+        <p data-th-text="*{email}"></p>
+    </p>
+
+    <p>
+        Phone Number:
+        <p data-th-text="*{phoneNumber}"></p>
+    </p>
+
+    <p>
+        Date of Birth:
+        <p data-th-text="*{dateOfBirth}"></p>
+    </p>
+
+    <br>
+
+</body>
+</html>

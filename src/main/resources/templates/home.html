@@ -29,14 +29,14 @@
         </p>
 
         <p>
-            Name:
+            Phone Number:
             <input type="text" data-th-field="*{phoneNumber}" />
             <br>
             <span class="error" data-th-if="${#fields.hasErrors('phoneNumber')}" data-th-errors = "*{phoneNumber}" style="color: red"></span>
         </p>
 
         <p>
-            Name:
+            Date of Birth:
             <input type="text" data-th-field="*{dateOfBirth}" />
             <br>
             <span class="error" data-th-if="${#fields.hasErrors('dateOfBirth')}" data-th-errors = "*{dateOfBirth}" style="color: red"></span>
@@ -48,7 +48,12 @@
         <div data-th-if="${#fields.hasErrors('global')}">
             <p data-th-each="${#fields.errors('global')}"
             data-th-text="${err}" class="error"></p>
-        </div>
+        </div> 
+        <br>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
 
     </form>
 </body>

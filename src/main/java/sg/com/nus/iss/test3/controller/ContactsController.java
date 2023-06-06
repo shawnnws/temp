@@ -17,7 +17,7 @@ import sg.com.nus.iss.test3.model.Contact;
 import sg.com.nus.iss.test3.repository.RedisRepo;
 
 @Controller
-@RequestMapping(path="/home")
+@RequestMapping(path="/")
 public class ContactsController {
     
     // Wire to repository

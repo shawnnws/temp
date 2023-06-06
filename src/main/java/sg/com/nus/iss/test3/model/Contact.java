@@ -34,9 +34,8 @@ public class Contact {
     private LocalDate dateOfBirth;
 
     @Min(value = 10, message = "Must be at least 10 years old")
-    @Max(value = 100, message = "Cannot be over 100 years old")
+    @Max(value = 100, message = "Cannot be over 100 years")
     private int age;
-    
     private String id;
     
     public String getName() {
@@ -61,14 +60,15 @@ public class Contact {
         return dateOfBirth;
     }
     public void setDateOfBirth(LocalDate dateOfBirth) {
+        int age = Period.between(this.dateOfBirth, LocalDate.now()).getYears();
         this.dateOfBirth = dateOfBirth;
+        this.age = age;
     }
     public int getAge() {
         return age;
     }
     public void setAge(int age) {
-
-        this.age = Period.between(this.dateOfBirth, LocalDate.now()).getYears();
+        this.age = age;
     }
     public String getId() {
         return id;

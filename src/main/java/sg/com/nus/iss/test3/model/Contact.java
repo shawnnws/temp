@@ -60,7 +60,10 @@ public class Contact {
         return dateOfBirth;
     }
     public void setDateOfBirth(LocalDate dateOfBirth) {
-        int age = Period.between(this.dateOfBirth, LocalDate.now()).getYears();
+        int calculatedAge = 0;
+        if(dateOfBirth != null){
+            calculatedAge = Period.between(dateOfBirth, LocalDate.now()).getYears();
+      } 
         this.dateOfBirth = dateOfBirth;
         this.age = age;
     }

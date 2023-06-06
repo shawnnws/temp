@@ -37,7 +37,7 @@
 
         <p>
             Date of Birth:
-            <input type="text" data-th-field="*{dateOfBirth}" />
+            <input type="date" data-th-field="*{dateOfBirth}" />
             <br>
             <span class="error" data-th-if="${#fields.hasErrors('dateOfBirth')}" data-th-errors = "*{dateOfBirth}" style="color: red"></span>
             <span class="error" data-th-if="${#fields.hasErrors('age')}" data-th-errors = "*{age}" style="color: red"></span>

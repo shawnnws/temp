@@ -17,7 +17,7 @@ import sg.com.nus.iss.test3.model.Contact;
 import sg.com.nus.iss.test3.repository.RedisRepo;
 
 @Controller
-@RequestMapping(path="/")
+@RequestMapping(path="/home")
 public class ContactsController {
     
     // Wire to repository
@@ -29,7 +29,7 @@ public class ContactsController {
     @GetMapping
     public String showHomePage(Model model) {
         model.addAttribute("contact", new Contact());
-        return "contact";
+        return "home";
     }
 
 

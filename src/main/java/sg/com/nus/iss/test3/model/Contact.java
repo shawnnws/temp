@@ -65,7 +65,7 @@ public class Contact {
             calculatedAge = Period.between(dateOfBirth, LocalDate.now()).getYears();
       } 
         this.dateOfBirth = dateOfBirth;
-        this.age = age;
+        this.age = calculatedAge;
     }
     public int getAge() {
         return age;
